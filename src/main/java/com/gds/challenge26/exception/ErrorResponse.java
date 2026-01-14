@@ -1,6 +1,5 @@
 package com.gds.challenge26.exception;
 
-import java.time.LocalDateTime;
 
 /**
  * Standard structure for all API error responses.
