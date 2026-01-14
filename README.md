@@ -1,3 +1,4 @@
+Refer to GDSChallengeApp_Readme.doc file in the repo.
 Session Application – GDS Challenge – ReadMe
 The Session Application allows users to participate in a restaurant voting session.
 Users are loaded via Batch (CSV import), and a session can be initiated either via CLI or managed through REST APIs.
