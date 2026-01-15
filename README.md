@@ -40,7 +40,10 @@ Get API /sessions/pick
 7.	Session Management view Participants & Choices
 Get API /sessions/participants
 
-Note: In my Local machine setup, Lombok package been included, but it’s not working as expected. So, I have included manually Getter and Setter. 
+Note: 
+1. In my Local machine setup, Lombok package been included, but it’s not working as expected. So, I have included manually Getter and Setter.
+
+2. System.out.print been used instead of slj4 logging log.info, Due to CLI usage in this project.
 
 CLI Session Menu:
 1.	Invite participant
