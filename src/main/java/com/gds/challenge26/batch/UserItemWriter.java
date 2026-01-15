@@ -14,13 +14,7 @@ import java.util.List;
  * This writer saves processed user records to the database
  * using {@link UserRepository} in a batch-oriented manner.
  */
-public class UserItemWriter implements ItemWriter<User> {
-
-    private final UserRepository userRepository;
-
-    public UserItemWriter(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+public record UserItemWriter(UserRepository userRepository) implements ItemWriter<User> {
 
     /**
      * Writes a chunk of {@link User} entities to the data store.
@@ -31,7 +25,9 @@ public class UserItemWriter implements ItemWriter<User> {
      */
     @Override
     public void write(Chunk<? extends User> chunk) {
-        List<?extends User> users = chunk.getItems();
+        List<? extends User> users = chunk.getItems();
+        if (users.isEmpty())
+            return;
         userRepository.saveAll(users);
     }
 }

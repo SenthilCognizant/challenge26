@@ -14,8 +14,8 @@ import java.util.Random;
 @Service
 public class SessionService {
     private String initiator;
-    private List<String> participants =new ArrayList<>();
-    private List<String> responses = new ArrayList<>();
+    private final List<String> participants =new ArrayList<>();
+    private final List<String> responses = new ArrayList<>();
     private boolean ended;
 
     private final UserRepository repository;

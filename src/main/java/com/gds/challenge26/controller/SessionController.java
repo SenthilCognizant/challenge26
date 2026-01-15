@@ -47,7 +47,7 @@ public class SessionController {
 
     @Operation(summary="Get meeting participants")
     @GetMapping("/participants")
-    public List<String> Participants(){
+    public List<String> participants(){
         return sessionService.restaurantChoices();
     }
 }

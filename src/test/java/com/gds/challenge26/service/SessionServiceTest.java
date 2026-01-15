@@ -41,12 +41,12 @@ public class SessionServiceTest {
 
         @Test
         void shouldSubmitResponseForValidParticipant() {
-            sessionService.invite("Ying Ying");
+            sessionService.invite("Yang");
 
-            sessionService.submitResponse("Ying Ying", "Chicken Rice");
+            sessionService.submitResponse("Yang", "Chicken Rice");
 
             assertEquals(1, sessionService.getResponses().size());
-            assertEquals("Ying Ying: Chicken Rice", sessionService.getResponses().get(0));
+            assertEquals("Yang: Chicken Rice", sessionService.getResponses().getFirst());
         }
 
         @Test

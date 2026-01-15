@@ -10,6 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.File;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -42,7 +43,7 @@ public class BatchControllerTest {
 
         JobParameters capturedParams = paramCaptor.getValue();
         assertNotNull(capturedParams.getString("filePath"));
-        assertTrue(new File(capturedParams.getString("filePath")).exists());
+        assertTrue(new File(Objects.requireNonNull(capturedParams.getString("filePath"))).exists());
     }
 
     @Test

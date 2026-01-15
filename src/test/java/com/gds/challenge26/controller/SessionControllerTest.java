@@ -64,7 +64,7 @@ class SessionControllerTest {
     void participants_shouldReturnParticipantsList() {
         List<String> responses = List.of("Alice: Pizza", "Bob: Burger");
         when(sessionService.restaurantChoices()).thenReturn(responses);
-        List<String> result = sessionController.Participants();
+        List<String> result = sessionController.participants();
         assertEquals(responses, result);
         verify(sessionService).restaurantChoices();
     }
